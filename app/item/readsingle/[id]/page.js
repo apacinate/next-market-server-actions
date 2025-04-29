@@ -3,7 +3,7 @@ import Image from "next/image"
 import connectDB from "../../../utils/database"
 import { ItemModel } from "../../../utils/schemaModels"
 
-const itemReadSingle = async(context)=>{
+export const itemReadSingle = async(context)=>{
     const params = await context.params
     await connectDB()
     const singleItem = await ItemModel.findById(params.id)
