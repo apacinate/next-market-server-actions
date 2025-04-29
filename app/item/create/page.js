@@ -1,5 +1,3 @@
-import connectDB from "../../utils/database"
-import { ItemModel } from "../../utils/schemaModels"
 import { itemCreate } from "../../actions/itemCreate"
 import { getToken } from "../../utils/auth"
 
