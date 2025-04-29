@@ -1,14 +1,6 @@
 import Link from "next/link"
 import Image from "next/image"
-import connectDB from "../../../utils/database"
-import { ItemModel } from "../../../utils/schemaModels"
-
-export const itemReadSingle = async(context)=>{
-    const params = await context.params
-    await connectDB()
-    const singleItem = await ItemModel.findById(params.id)
-    return singleItem
-}
+import itemReadSingle from "../../../utils/itemReadSingle"
 
 const ReadSingleItem = async(context) =>{
     const singleItem = await itemReadSingle(context)

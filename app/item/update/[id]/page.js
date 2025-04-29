@@ -1,7 +1,6 @@
-import { itemReadSingle } from "../../readsingle/[id]/page"
 import { itemUpdate } from "../../../actions/itemUpdate"
 import { getToken } from "../../../utils/auth"
-
+import itemReadSingle from "../../../utils/itemReadSingle"
 
 const UpdateItem = async(context) => {
     const singleItem = await itemReadSingle(context)

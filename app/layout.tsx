@@ -1,14 +1,19 @@
-import "./globals.css"
+// app/layout.tsx
+import React, { ReactNode } from "react"
 import Header from "./components/header"
 import Footer from "./components/footer"
 
-const RootLayout =({children}) => {
-  return(
+type RootLayoutProps = {
+  children: ReactNode
+}
+
+const RootLayout = ({ children }: RootLayoutProps) => {
+  return (
     <html lang="en">
       <body>
-        <Header/>
-        <main>{children}</main>
-        <Footer/>
+        <Header />
+        {children}
+        <Footer />
       </body>
     </html>
   )

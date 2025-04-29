@@ -1,5 +1,5 @@
 import Image from "next/image"
-import { itemReadSingle } from "../../readsingle/[id]/page"
+import itemReadSingle from "../../../utils/itemReadSingle"
 import { itemDelete } from "../../../actions/itemDelete"
 import { getToken } from "../../../utils/auth"
 
